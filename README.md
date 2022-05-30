@@ -9,9 +9,6 @@ Math Magician is a calculator build using react.js
   <img src="https://github.com/microverseinc/curriculum-react-redux/blob/main/math-magicians/images/calculator.png" alt="Calculator" width="300px" />
 </p>
 
-## [No available]()
-
-
 ## Built With
 
 - HTML, CSS
