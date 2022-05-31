@@ -16,10 +16,4 @@ class App extends React.Component {
   )
 }
 
-// const App = () => (
-//   <div className="App">
-//     <Calculator />
-//   </div>
-// );
-
 export default App;
