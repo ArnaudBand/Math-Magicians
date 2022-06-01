@@ -1,7 +1,7 @@
+import React from 'react';
 import Button from './Button';
 import calculate from '../logic/calculate';
 
-// eslint-disable-next-line no-undef
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
