@@ -8,7 +8,7 @@ class Calculator extends React.Component {
     this.state = {
       total: 0,
       next: null,
-      operation: null
+      operation: null,
     };
     this.onClick = this.onClick.bind(this);
   }
