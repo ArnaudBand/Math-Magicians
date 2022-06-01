@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line import/extensions
 import Button from './Button';
 import calculate from '../logic/calculate';
 
