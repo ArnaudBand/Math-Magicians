@@ -9,13 +9,20 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgb(226, 226, 226);
+  background-color: rgb(178, 178, 178);
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
+}
+
+.grid-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
 .output {
@@ -27,7 +34,7 @@ body {
 }
 
 button {
-  padding: 20px 35px;
+  padding: 20px 38px;
   border: none;
   cursor: pointer;
 }
