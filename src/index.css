@@ -18,6 +18,13 @@ body {
   gap: 1px;
 }
 
+.grid-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
 .output {
   display: flex;
   justify-content: flex-end;
