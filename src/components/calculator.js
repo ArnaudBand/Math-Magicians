@@ -1,62 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from './button';
 import calculate from '../logic/calculate';
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: 0,
-      next: null,
-      operation: null,
-    };
-    this.onClick = this.onClick.bind(this);
-  }
+const Calculator = () => {
+  const [state, setState] = useState({ total: 0, next: null, operation: null });
 
-  onClick = (event) => {
-    const result = calculate(this.state, event.target.id);
-    this.setState(result);
+  const onClick = (event) => {
+    const result = calculate(state, event.target.id);
+    setState(result);
   };
 
-  render() {
-    const { total, next, operation } = this.state;
-    return (
-      <>
-        <div className="output">
-          <span>{total}</span>
-          <span>{operation}</span>
-          <span>{next}</span>
-        </div>
-        <div className="grid-container">
+  const button = [
+    { id: 'AC', className: 'btn_center', onClick: { onClick } },
+    { id: '+/-', className: 'btn_center', onClick: { onClick } },
+    { id: '%', className: 'btn_center', onClick: { onClick } },
+    { id: '/', className: 'btn_left', onClick: { onClick } },
+    { id: '7', className: 'btn_center', onClick: { onClick } },
+    { id: '8', className: 'btn_center', onClick: { onClick } },
+    { id: '9', className: 'btn_center', onClick: { onClick } },
+    { id: 'x', className: 'btn_left', onClick: { onClick } },
+    { id: '4', className: 'btn_center', onClick: { onClick } },
+    { id: '5', className: 'btn_center', onClick: { onClick } },
+    { id: '6', className: 'btn_center', onClick: { onClick } },
+    { id: '-', className: 'btn_left', onClick: { onClick } },
+    { id: '1', className: 'btn_center', onClick: { onClick } },
+    { id: '2', className: 'btn_center', onClick: { onClick } },
+    { id: '3', className: 'btn_center', onClick: { onClick } },
+    { id: '+', className: 'btn_left', onClick: { onClick } },
+    { id: '0', className: 'btn_center doublespan', onClick: { onClick } },
+    { id: '.', className: 'btn_center', onClick: { onClick } },
+    { id: '=', className: 'btn_left', onClick: { onClick } },
+  ];
 
-          <Button className="btn_center" id="AC" onClick={this.onClick} />
-          <Button className="btn_center" id="+/-" onClick={this.onClick} />
-          <Button className="btn_center" id="%" onClick={this.onClick} />
-          <Button className="btn_left" id="/" onClick={this.onClick} />
+  return (
+    <>
+      <div className="output">
+        <span>{state.total}</span>
+        <span>{state.operation}</span>
+        <span>{state.next}</span>
+      </div>
+      <div className="grid-container">
 
-          <Button className="btn_center" id="7" onClick={this.onClick} />
-          <Button className="btn_center" id="8" onClick={this.onClick} />
-          <Button className="btn_center" id="9" onClick={this.onClick} />
-          <Button className="btn_left" id="x" onClick={this.onClick} />
+        {button.map((btn) => (
+          <Button
+            key={btn.id}
+            id={btn.id}
+            className={btn.className}
+            onClick={onClick}
+          />
+        ))}
+      </div>
 
-          <Button className="btn_center" id="4" onClick={this.onClick} />
-          <Button className="btn_center" id="5" onClick={this.onClick} />
-          <Button className="btn_center" id="6" onClick={this.onClick} />
-          <Button className="btn_left" id="-" onClick={this.onClick} />
-
-          <Button className="btn_center" id="1" onClick={this.onClick} />
-          <Button className="btn_center" id="2" onClick={this.onClick} />
-          <Button className="btn_center" id="3" onClick={this.onClick} />
-          <Button className="btn_left" id="+" onClick={this.onClick} />
-
-          <Button className="btn_center doublespan" id="0" onClick={this.onClick} />
-          <Button className="btn_center" id="." onClick={this.onClick} />
-          <Button className="btn_left" id="=" onClick={this.onClick} />
-        </div>
-
-      </>
-    );
-  }
-}
+    </>
+  );
+};
 
 export default Calculator;
