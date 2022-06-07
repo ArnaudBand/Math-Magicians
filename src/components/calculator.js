@@ -10,7 +10,7 @@ const Calculator = () => {
     setState(result);
   };
 
-  const button = [
+  const buttons = [
     { id: 'AC', className: 'btn_center', onClick: { onClick } },
     { id: '+/-', className: 'btn_center', onClick: { onClick } },
     { id: '%', className: 'btn_center', onClick: { onClick } },
@@ -34,21 +34,30 @@ const Calculator = () => {
 
   return (
     <>
-      <div className="output">
-        <span>{state.total}</span>
-        <span>{state.operation}</span>
-        <span>{state.next}</span>
+      <div className="title_calc">
+        <h1>Let&apos;s do some maths:</h1>
       </div>
-      <div className="grid-container">
+      <div className="calculate">
+        <div className="container">
+          <div className="container_calc">
+            <div className="output">
+              <span>{state.total}</span>
+              <span>{state.operation}</span>
+              <span>{state.next}</span>
+            </div>
+            <div className="grid-container">
 
-        {button.map((btn) => (
-          <Button
-            key={btn.id}
-            id={btn.id}
-            className={btn.className}
-            onClick={onClick}
-          />
-        ))}
+              {buttons.map((btn) => (
+                <Button
+                  key={btn.id}
+                  id={btn.id}
+                  className={btn.className}
+                  onClick={onClick}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
     </>
