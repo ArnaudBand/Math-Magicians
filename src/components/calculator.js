@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from './button';
 import calculate from '../logic/calculate';
+import './css/calculator.css';
 
 const Calculator = () => {
   const [state, setState] = useState({ total: 0, next: null, operation: null });
@@ -10,7 +11,7 @@ const Calculator = () => {
     setState(result);
   };
 
-  const button = [
+  const buttons = [
     { id: 'AC', className: 'btn_center', onClick: { onClick } },
     { id: '+/-', className: 'btn_center', onClick: { onClick } },
     { id: '%', className: 'btn_center', onClick: { onClick } },
@@ -34,23 +35,29 @@ const Calculator = () => {
 
   return (
     <>
-      <div className="output">
-        <span>{state.total}</span>
-        <span>{state.operation}</span>
-        <span>{state.next}</span>
-      </div>
-      <div className="grid-container">
+      <h1 className="title_home">Let&apos;s do some maths:</h1>
+      <div className="calculate">
+        <div className="container">
+          <div className="container_calc">
+            <div className="output">
+              <span>{state.total}</span>
+              <span>{state.operation}</span>
+              <span>{state.next}</span>
+            </div>
+            <div className="grid-container">
 
-        {button.map((btn) => (
-          <Button
-            key={btn.id}
-            id={btn.id}
-            className={btn.className}
-            onClick={onClick}
-          />
-        ))}
+              {buttons.map((btn) => (
+                <Button
+                  key={btn.id}
+                  id={btn.id}
+                  className={btn.className}
+                  onClick={onClick}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-
     </>
   );
 };

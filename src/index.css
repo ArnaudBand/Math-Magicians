@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,11 +7,56 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   background-color: rgb(178, 178, 178);
+  font-family: 'Cookie', cursive;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 3rem;
+}
+
+.menu_link {
+  margin: 0 1rem;
+  border-right: 1px solid #000;
+  padding-right: 1rem;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+
+.menu_link:last-child {
+  border-right: none;
+}
+
+.menu_link:hover {
+  padding: 1rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 1rem;
+}
+
+.right_side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calculate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .grid-container {
@@ -49,4 +96,9 @@ button {
 
 .doublespan {
   grid-column: span 2;
+}
+
+.text-center {
+  text-align: center;
+  margin: 2rem 0;
 }
