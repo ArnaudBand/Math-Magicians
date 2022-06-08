@@ -1,5 +1,5 @@
 import React from 'react';
-import './home.css';
+import './css/home.css';
 
 const Home = () => (
   <>
@@ -34,6 +34,7 @@ const Home = () => (
         Est sit amet facilisis magna etiam tempor orci eu. Ut sem viverra aliquet eget sit amet
         tellus. Pharetra massa massa ultricies mi quis hendrerit dolor magna.
       </p>
+      <p className="text-center">By Arnaud</p>
     </header>
   </>
 );
