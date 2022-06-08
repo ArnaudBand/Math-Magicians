@@ -4,9 +4,8 @@
   justify-content: center;
   align-items: center;
   border: 1px solid #000;
-  width: 600px;
-  height: 300px;
   margin: 0 auto;
+  width: 600px;
   padding: 1rem;
   background-color: beige;
   border-radius: 1rem;
@@ -20,6 +19,12 @@
 
 .card-title {
   font-size: 1.5rem;
+  text-align: center;
+}
+
+.card-text {
+  text-align: left;
+  width: 450px;
 }
 
 .btn_quotes {
@@ -27,6 +32,7 @@
   border-radius: 1rem;
   box-shadow: 2px 3px 5px rgb(126, 126, 126);
   transition: all 1s;
+  text-align: right;
 }
 
 .btn_quotes:hover {
