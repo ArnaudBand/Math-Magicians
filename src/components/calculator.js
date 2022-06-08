@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from './button';
 import calculate from '../logic/calculate';
+import './css/calculator.css';
 
 const Calculator = () => {
   const [state, setState] = useState({ total: 0, next: null, operation: null });
@@ -34,9 +35,7 @@ const Calculator = () => {
 
   return (
     <>
-      <div className="title_calc">
-        <h1>Let&apos;s do some maths:</h1>
-      </div>
+      <h1 className="title_home">Let&apos;s do some maths:</h1>
       <div className="calculate">
         <div className="container">
           <div className="container_calc">
@@ -59,7 +58,6 @@ const Calculator = () => {
           </div>
         </div>
       </div>
-
     </>
   );
 };
