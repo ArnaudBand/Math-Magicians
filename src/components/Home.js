@@ -1,9 +1,10 @@
 import React from 'react';
+import './home.css';
 
 const Home = () => (
   <>
     <header className="div_header">
-      <h1 className="logo">Welcome to our page</h1>
+      <h3 className="text_title">Welcome to our page !</h3>
       <p>
         In hac habitasse platea dictumst vestibulum. Aliquet porttitor lacus luctus accumsan.
         Scelerisque purus semper eget duis at tellus at. In fermentum et sollicitudin ac orci
