@@ -1,4 +1,5 @@
 import React from 'react';
+import './css/quotes.css';
 
 const Quotes = () => {
   const [quotes, setQuotes] = React.useState([]);
@@ -23,32 +24,28 @@ const Quotes = () => {
 
   return (
     <div style={{ backgroundColor: 'transparent', minHeight: '100vh' }}>
-      <div className="container pt-5">
-        <div className="jumbotron">
-          <div className="card">
-            <div className="card-header border-bottom border-white text-center">Inspiration Quotes</div>
-            <div className="card-body">
-              {randomQuote ? (
-                <>
-                  <h5 className="card-title">
-                    -
-                    {' '}
-                    {randomQuote.author || 'No Author'}
-                  </h5>
-                  <p className="card-text">
-                    &quot;
-                    {randomQuote.text}
-                    &quot;
-                  </p>
-                </>
-              ) : (
-                <h2>Loading</h2>
-              )}
-
-              <div className="d-flex justify-content-evenly">
-                <button type="button" onClick={getNewQuote} className="g-col-4 btn btn-primary ml-3">New Quote</button>
-              </div>
-            </div>
+      <div className="jumbotron">
+        <div className="card">
+          <div className="card-body">
+            {randomQuote ? (
+              <>
+                <p className="card-text">
+                  &quot;
+                  {randomQuote.text}
+                  &quot;
+                </p>
+                <span className="card-title">
+                  - Author:
+                  {' '}
+                  {randomQuote.author || 'No Author'}
+                </span>
+              </>
+            ) : (
+              <h2>Loading</h2>
+            )}
+          </div>
+          <div className="div_btn">
+            <button type="button" onClick={getNewQuote} className="btn_quotes">New Quote</button>
           </div>
         </div>
 

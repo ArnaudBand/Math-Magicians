@@ -1,0 +1,35 @@
+
+.jumbotron {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: beige;
+  border-radius: 1rem;
+  box-shadow: 5px 3px 2px 2px rgb(163, 161, 161);
+}
+
+.card-body {
+  border-bottom: 1px solid #000;
+  height: 50%;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.btn_quotes {
+  margin: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 2px 3px 5px rgb(126, 126, 126);
+  transition: all 1s;
+}
+
+.btn_quotes:hover {
+  background-color: #000;
+  color: #fff;
+}
