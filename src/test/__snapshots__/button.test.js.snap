@@ -2,6 +2,11 @@
 
 exports[`Calculator button renders correctly 1`] = `
 <button
+  className="class"
+  id="1"
+  onClick={[Function]}
   type="button"
-/>
+>
+  1
+</button>
 `;
