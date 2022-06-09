@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quotes renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "minHeight": "100vh",
+    }
+  }
+>
+  <div
+    className="jumbotron"
+  >
+    <div
+      className="card"
+    >
+      <div
+        className="card-body"
+      >
+        <h2>
+          Loading
+        </h2>
+      </div>
+      <div
+        className="div_btn"
+      >
+        <button
+          className="btn_quotes"
+          onClick={[Function]}
+          type="button"
+        >
+          New Quote
+        </button>
+      </div>
+    </div>
+  </div>
+  <p
+    className="text-center"
+  >
+    By Arnaud
+  </p>
+</div>
+`;
